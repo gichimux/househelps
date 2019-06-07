@@ -6,3 +6,7 @@ from . import main
 def index():
     return render_template('landing.html')
 
+@main.route('/google')
+def google():
+
+    return render_template('google.html')
