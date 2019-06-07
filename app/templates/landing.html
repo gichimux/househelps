@@ -1,18 +1,454 @@
-{%extends 'base.html'%}
-    {% block content %}
-    {% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    {% endblock%}
-    <div class="container">
-            <div class="row">
-                    <div class="jumbotron jumbotron-fluid">
-                        <div class="container">
-                       <p> <img src="{{url_for('static' ,filename='img/clean.jpg')}}"></p>
-                </div>
-                </div>
-                
-            </div>
-        </div>
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Bootstrap, Landing page, Template, Business, Service">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>House helps - landing page</title>
+    <link rel="shortcut icon" href="{{url_for('static', filename='img/2.png')}}" type="image/png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/animate.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/LineIcons.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.carousel.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/owl.theme.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/nivo-lightbox.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">    
+    <link rel="stylesheet" href="{{url_for('static', filename='css/responsive.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+  </head>
   
-    {%endblock%}
+  <body>
+
+    <!-- Header Section Start -->
+    <header id="home" class="hero-area">    
+      <div class="overlay">
+        <span></span>
+        <span></span>
+      </div>
+      <nav class="navbar navbar-expand-md bg-inverse fixed-top scrolling-navbar">
+        <div class="container">
+          <a href="/" class="navbar-brand" style="font-family: 'Permanent Marker', cursive; font-size:40px; color: #E85680 ">MAID-uP</a>       
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="lni-menu"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto w-100 justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#services">About</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#features">Services</a>
+              </li>                            
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#showcase">Showcase</a>
+              </li>       
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#pricing">Pricing</a>
+              </li>     
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#team">Team</a>
+              </li> 
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#blog">Blog</a>
+              </li>  
+              <li class="nav-item">
+                <a class="nav-link page-scroll" href="#contact">Contact</a>
+              </li> 
+              <li class="nav-item">
+                <a class="btn btn-singin" href="#">Become a Maid</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>  
+      <div class="container">      
+        <div class="row space-100">
+          <div class="col-lg-6 col-md-12 col-xs-12">
+            <div class="contents">
+              <h2 class="head-title">Get your boring household Tasks done from your device </h2>
+              <p>our team of professional house helps is always ready <br>to carry out your tasks at an affordable price.</p>
+              <div class="header-button">
+                <a href="{{url_for('auth.login')}}" class="btn btn-border-filled">Log In</a>
+                <a href="{{url_for('auth.register')}}" class="btn btn-border page-scroll">Sign Up</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-xs-12 p-0">
+            <div class="intro-img">
+              <img src="{{ url_for ('static', filename='img/logo.svg') }}" alt="">
+            </div>            
+          </div>
+        </div> 
+      </div>             
+    </header>
+    <!-- Header Section End --> 
+
+
+    <!-- Services Section Start -->
+    <section id="services" class="section">
+      <div class="container">
+        <h2 style="text-align: center;">How it works</h2>
+        <div class="row">
+          <!-- Start Col -->
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="services-item text-center">
+              <div class="icon">
+                <i class="lni-book"></i>
+              </div>
+              <h4>Sign Up</h4>
+              <p>if you havent got an account yet, sign up for one</p>
+            </div>
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="services-item text-center">
+              <div class="icon">
+                <i class="lni-check-mark-circle"></i>
+              </div>
+              <h4>Log In</h4>
+              <p>After account creation, proceed to log in to the application</p>
+            </div>
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-4 col-md-6 col-xs-12">
+            <div class="services-item text-center">
+              <div class="icon">
+                <i class="lni-emoji-happy"></i>
+              </div>
+              <h4>Get a Maid!</h4>
+              <p>According to the task in hand, Get a maid of your choosing</p>
+            </div>
+          </div>
+          <!-- End Col -->
+
+        </div>
+      </div>
+    </section>
+    <!-- Services Section End -->
+      
+     <!-- Client Testimoninals Section Start -->
+    <section id="testimonial" class="section">
+      <div class="container right-position">
+        <!-- Start Row -->
+        <div class="row">
+          <div class="col-md-12 col-sm-12">
+            <div class="video-promo-content text-center">
+
+              <a id="play-video" class="video-play-button video-popup" href="https://www.youtube.com/watch?v=Y4fodpIwal8&list=RDXCElIIYx_8s&index=13">
+                <span></span>
+              </a>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Row -->
+        <!-- Start Row -->
+        <div class="row justify-content-center testimonial-area">
+          <div class="col-lg-10 col-md-12 col-sm-12 col-xs-12 pr-20 pl-20" style="overflow: hidden;padding-bottom: 60px">
+            <div id="client-testimonial" class="text-center owl-carousel">
+              <div class="item">
+                <div class="testimonial-item">
+                  <div class="content-inner">
+                    <p class="description">Appropriately implement one-to-one catalysts for change <br> vis-a-vis wireless catalysts for change. Enthusiastically architect <br> adaptive e-tailers after sustainable total linkage. Appropriately <br> implement one-to-one catalysts for change.</p>
+                    <div class="author-info">
+                      <h5>Tahmina Anny ; <span> Househelps Customer</span></h5>
+                    </div>
+                  </div>
+                  <div class="client-thumb">
+                    <img src="{{url_for('static', filename='img/customer.jpg')}}" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-item">
+                  <div class="content-inner">
+                    <p class="description">Appropriately implement one-to-one catalysts for change <br> vis-a-vis wireless catalysts for change. Enthusiastically architect <br> adaptive e-tailers after sustainable total linkage. Appropriately <br> implement one-to-one catalysts for change.</p>
+                    <div class="author-info">
+                      <h5>Tahmina Anny ; <span> Househelps Customer</span></h5>
+                    </div>
+                  </div>
+                  <div class="client-thumb">
+                    <img src="{{url_for('static', filename='img/testimonial/01.png')}}"  alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-item">
+                  <div class="content-inner">
+                    <p class="description">Appropriately implement one-to-one catalysts for change <br> vis-a-vis wireless catalysts for change. Enthusiastically architect <br> adaptive e-tailers after sustainable total linkage. Appropriately <br> implement one-to-one catalysts for change.</p>
+                    <div class="author-info">
+                      <h5>Tahmina Anny ; <span> Househelps Customer</span></h5>
+                    </div>
+                  </div>
+                  <div class="client-thumb">
+                    <img src="{{url_for('static', filename='img/testimonial/01.png')}}"  alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-item">
+                  <div class="content-inner">
+                    <p class="description">Appropriately implement one-to-one catalysts for change <br> vis-a-vis wireless catalysts for change. Enthusiastically architect <br> adaptive e-tailers after sustainable total linkage. Appropriately <br> implement one-to-one catalysts for change.</p>
+                    <div class="author-info">
+                      <h5>Tahmina Anny ; <span> Househelps Customer</span></h5>
+                    </div>
+                  </div>
+                  <div class="client-thumb">
+                    <img src="{{url_for('static', filename='img/testimonial/01.png')}}" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-item">
+                  <div class="content-inner">
+                    <p class="description">Appropriately implement one-to-one catalysts for change <br> vis-a-vis wireless catalysts for change. Enthusiastically architect <br> adaptive e-tailers after sustainable total linkage. Appropriately <br> implement one-to-one catalysts for change.</p>
+                    <div class="author-info">
+                      <h5>Tahmina Anny ; <span> Househelps Customer</span></h5>
+                    </div>
+                  </div>
+                  <div class="client-thumb">
+                    <img src="{{url_for('static', filename='img/testimonial/01.png')}}"  alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimonial-item">
+                  <div class="content-inner">
+                    <p class="description">Appropriately implement one-to-one catalysts for change <br> vis-a-vis wireless catalysts for change. Enthusiastically architect <br> adaptive e-tailers after sustainable total linkage. Appropriately <br> implement one-to-one catalysts for change.</p>
+                    <div class="author-info">
+                      <h5>Tahmina Anny ; <span> Househelps Customer</span></h5>
+                    </div>
+                  </div>
+                  <div class="client-thumb">
+                    <img src="{{url_for('static', filename='img/testimonial/01.png')}}"  alt="">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- End Row -->
+      </div>
+    </section>
+    <!-- Client Testimoninals Section End --> 
+   
+    <!-- Contact Us Section -->
+    <section id="contact" class="section">
+      <!-- Container Starts -->
+      <div class="container">
+        <!-- Start Row -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="contact-text section-header text-center">  
+              <div>   
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="desc-text">
+                  <p>Wanna Know more about us? fill in the form below and <br> we will get back to you as soon as we can</p>  
+    
+                </div>
+              </div> 
+            </div>
+          </div>
+
+        </div>
+        <!-- End Row -->
+        
+        <!-- Start Row -->
+        <div class="row">
+          <!-- Start Col -->
+          <div class="col-lg-6 col-md-12">
+          <form id="contactForm">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Name" required data-error="Please enter your name">
+                  <div class="help-block with-errors"></div>
+                </div>                                 
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" placeholder="Subject" id="msg_subject" class="form-control" name="msg_subject" required data-error="Please enter your subject">
+                  <div class="help-block with-errors"></div>
+                </div> 
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="email" name="email" placeholder="Email" required data-error="Please enter your Email">
+                  <div class="help-block with-errors"></div>
+                </div>                                 
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <input type="text" placeholder="Budget" id="budget" class="form-control" name="budget" required data-error="Please enter your Budget">
+                  <div class="help-block with-errors"></div>
+                </div> 
+              </div>
+              <div class="col-md-12">
+                <div class="form-group"> 
+                  <textarea class="form-control" id="message"  name="message" placeholder="Write Message" rows="4" data-error="Write your message" required></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="submit-button">
+                  <button class="btn btn-common" id="submit" type="submit">Submit</button>
+                  <div id="msgSubmit" class="h3 hidden"></div> 
+                  <div class="clearfix"></div> 
+                </div>
+              </div>
+            </div>            
+          </form>
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-1">
+            
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-4 col-md-12">
+            <div class="contact-img">
+              <img src="url_for('static', filename='img/contact/01.png')}}" class="img-fluid" alt="">
+            </div>
+          </div>
+          <!-- End Col -->
+          <!-- Start Col -->
+          <div class="col-lg-1">
+          </div>
+          <!-- End Col -->
+
+        </div>
+        <!-- End Row -->
+      </div>
+    </section>
+    <!-- Contact Us Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+      <!-- Footer Area Start -->
+      <section id="footer-Content">
+        <div class="container">
+          <!-- Start Row -->
+          <div class="row">
+
+          <!-- Start Col -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              
+              <div class="footer-logo">
+               <!-- <img src="{{url_for('static', filename='img/logo.svg')}}" style="width:30px; height:30px;" alt=""> -->
+              </div>
+            </div>
+             <!-- End Col -->
+              <!-- Start Col -->
+            <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title">Company</h3>
+                <ul class="menu">
+                  <li><a href="#">  - About Us</a></li>
+                  <li><a href="#">- Career</a></li>
+                  <li><a href="#">- Blog</a></li>
+                  <li><a href="#">- Press</a></li>
+                </ul>
+              </div>
+            </div>
+             <!-- End Col -->
+              <!-- Start Col -->
+            <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title">Product</h3>
+                <ul class="menu">
+                  <li><a href="#">  - Customer Service</a></li>
+                  <li><a href="#">- Enterprise</a></li>
+                  <li><a href="#">- Price</a></li>
+                  <li><a href="#">- Scurity</a></li>
+                  <li><a href="#">- Why US?</a></li>
+                </ul>
+              </div>
+            </div>
+             <!-- End Col -->
+              <!-- Start Col -->
+            <div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title">Download App</h3>
+                <ul class="menu">
+                  <li><a href="#">  - Android App</a></li>
+                  <li><a href="#">- IOS App</a></li>
+                  <li><a href="#">- Windows App</a></li>
+                  <li><a href="#">- Play Store</a></li>
+                  <li><a href="#">- IOS Store</a></li>
+                </ul>
+              </div>
+            </div>
+             <!-- End Col -->
+              <!-- Start Col -->
+            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 col-mb-12">
+              <div class="widget">
+                <h3 class="block-title">Subscribe Now</h3>
+                <p>Appropriately implement calysts for change visa wireless catalysts for change. </p>
+                <div class="subscribe-area">
+                  <input type="email" class="form-control" placeholder="Enter Email">
+                  <span><i class="lni-chevron-right"></i></span>
+                </div>
+              </div>
+            </div>
+            <!-- End Col -->
+          </div>
+          <!-- End Row -->
+        </div>
+        <!-- Copyright Start  -->
+
+        <div class="copyright">
+          <div class="container">
+            <!-- Star Row -->
+            <div class="row">
+              <div class="col-md-12">
+                <div class="site-info text-center">
+                  <p>Crafted by <a href="#" rel="nofollow">Gichimu</a></p>
+                </div>              
+                
+              </div>
+              <!-- End Col -->
+            </div>
+            <!-- End Row -->
+          </div>
+        </div>
+      <!-- Copyright End -->
+      </section>
+      <!-- Footer area End -->
+      
+    </footer>
+    <!-- Footer Section End --> 
+
+
+    <!-- Go To Top Link -->
+    <a href="#" class="back-to-top">
+      <i class="lni-chevron-up"></i>
+    </a> 
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <div class="loader" id="loader-1"></div>
+    </div>
+    <!-- End Preloader -->
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="{{url_for('static', filename='js/jquery-min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/owl.carousel.js')}}"></script>      
+    <script src="{{url_for('static', filename='js/jquery.nav.js')}}"></script>    
+    <script src="{{url_for('static', filename='js/scrolling-nav.js')}}"></script>    
+    <script src="{{url_for('static', filename='js/jquery.easing.min.js')}}"></script>     
+    <script src="{{url_for('static', filename='js/nivo-lightbox.js')}}"></script>     
+    <script src="{{url_for('static', filename='js/jquery.magnific-popup.min.js')}}"></script>      
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+    
+  </body>
+</html>
